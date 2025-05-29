@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>苏教版二年级下册期末试卷（高难度）</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background-color: #f0f8ff;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 150, 0.1);
+            border: 1px solid #4b86e6;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #4b86e6;
+            position: relative;
+        }
+        
+        .header h1 {
+            color: #1e3c72;
+            font-size: 28px;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        
+        .header .subtitle {
+            color: #2a5298;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .info-bar {
+            display: flex;
+            justify-content: space-between;
+            background: linear-gradient(to right, #e3eeff, #d4e4ff);
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-size: 16px;
+        }
+        
+        .subject {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #f9fbff;
+            border-radius: 12px;
+            border-left: 5px solid #4b86e6;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .subject-title {
+            color: #1e3c72;
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px dashed #a8c6ff;
+            display: flex;
+            align-items: center;
+        }
+        
+        .subject-title:before {
+            content: "◆";
+            color: #ff6b6b;
+            margin-right: 10px;
+            font-size: 18px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            color: #2a5298;
+            font-size: 19px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 4px solid #ff9e6b;
+        }
+        
+        .question {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: white;
+            border-radius: 10px;
+            border: 1px solid #d1e3ff;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .question:hover {
+            box-shadow: 0 5px 15px rgba(75, 134, 230, 0.15);
+            transform: translateY(-2px);
+        }
+        
+        .question-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2a5298;
+            font-size: 17px;
+        }
+        
+        .question-content {
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .options {
+            padding-left: 25px;
+        }
+        
+        .option {
+            margin-bottom: 8px;
+        }
+        
+        .writing-box {
+            height: 150px;
+            border: 1px dashed #4b86e6;
+            border-radius: 8px;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #fcfdff;
+        }
+        
+        .math-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+        
+        .math-cell {
+            padding: 12px;
+            border: 1px solid #c2d6ff;
+            border-radius: 8px;
+            text-align: center;
+            background-color: #f2f7ff;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #d1e3ff;
+            color: #666;
+            font-size: 16px;
+        }
+        
+        .difficulty-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: linear-gradient(to right, #ff9e6b, #ff6b6b);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        
+        .tip {
+            background-color: #fff8e6;
+            border-left: 4px solid #ffc107;
+            padding: 10px 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 15px;
+        }
+        
+        .answer-area {
+            height: 30px;
+            border-bottom: 1px solid #4b86e6;
+            display: inline-block;
+            min-width: 50px;
+            text-align: center;
+            margin: 0 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .math-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>苏教版二年级下册期末试卷</h1>
+            <div class="subtitle">（高难度挑战版）</div>
+            <div class="info-bar">
+                <div>班级：__________</div>
+                <div>姓名：__________</div>
+                <div>学号：__________</div>
+                <div>得分：__________</div>
+            </div>
+        </div>
+        
+        <div class="tip">
+            <strong>温馨提示：</strong> 本试卷难度较高，请同学们认真审题，仔细作答，祝你们发挥出最佳水平！
+        </div>
+        
+        <!-- 语文部分 -->
+        <div class="subject">
+            <div class="subject-title">语文部分（60分）</div>
+            
+            <div class="section">
+                <div class="section-title">一、基础运用（18分）</div>
+                
+                <div class="question">
+                    <div class="difficulty-tag">高难度</div>
+                    <div class="question-title">1. 选择加点字的正确读音（6分）</div>
+                    <div class="question-content">
+                        <p>(1) 爷爷在院子里种（zhǒng zhòng）了许多花种（zhǒng zhòng）。</p>
+                        <p>(2) 弟弟拿着扫（sǎo sào）帚在扫（sǎo sào）地。</p>
+                        <p>(3) 我觉（jué jiào）得现在去睡觉（jué jiào）太早了。</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <div class="difficulty-tag">高难度</div>
+                    <div class="question-title">2. 同音字组词（6分）</div>
+                    <div class="question-content">
+                        <p>fēng: ( )利 &nbsp; 山( ) &nbsp; ( )蜜</p>
+                        <p>jìng: ( )爱 &nbsp; 安( ) &nbsp; 眼( )</p>
+                        <p>yuán: ( )来 &nbsp; 公( ) &nbsp; ( )形</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <div class="difficulty-tag">高难度</div>
+                    <div class="question-title">3. 把词语补充完整，并选择一个造句（6分）</div>
+                    <div class="question-content">
+                        <p>揠苗( )长 &nbsp; 守( )待兔 &nbsp; 眉( )眼笑</p>
+                        <p>勤学( )练 &nbsp; ( )面春风 &nbsp; 神( )奕奕</p>
+                        <p>造句：________________________________________________________</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">二、阅读理解（22分）</div>
+                
+                <div class="question">
+                    <div class="difficulty-tag">高难度</div>
+                    <div class="question-title">4. 阅读短文，回答问题（12分）</div>
+                    <div class="question-content">
+                        <p>春天来了，万物复苏。小河里的冰融化了，河水叮叮咚咚地流着。岸边的柳树抽出嫩绿的枝条，在微风中轻轻摇摆。小草从土里探出头来，给大地铺上了一层绿色的地毯。花园里，各种花儿竞相开放，红的像火，粉的像霞，白的像雪。</p>
+                        <p>春天是生机勃勃的季节，也是充满希望的季节。农民伯伯在田里播种，期待着秋天的丰收。小朋友们脱掉厚厚的棉衣，在草地上奔跑、放风筝，欢声笑语在空中回荡。</p>
+                        <p>(1) 短文描写的是什么季节的景象？(2分)</p>
+                        <p>(2) 找出文中描写柳树和小草的句子，用波浪线画出来。(2分)</p>
+                        <p>(3) 文中把花儿比作了什么？请写出来。(3分)</p>
+                        <p>(4) 为什么说春天是充满希望的季节？(5分)</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <div class="difficulty-tag">高难度</div>
+                    <div class="question-title">5. 古诗文默写（10分）</div>
+                    <div class="question-content">
+                        <p>(1) 默写《村居》前两句：________________________，________________________。</p>
+                        <p>(2) 默写《咏柳》后两句：________________________，________________________。</p>
+                        <p>(3) 补充诗句：接天莲叶无穷碧，________________________。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">三、写话天地（20分）</div>
+                <div class="question">
+                    <div class="difficulty-tag">高难度</div>
+                    <div class="question-title">6. 看图写话</div>
+                    <div class="question-content">
+                        <p>仔细观察图片，想一想：</p>
+                        <p>① 这是什么地方？</p>
+                        <p>② 图上有哪些人？他们在干什么？</p>
+                        <p>③ 他们的心情怎么样？</p>
+                        <p>请根据以上提示写一段通顺的话，不少于100字。</p>
+                        <div class="writing-box"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 数学部分 -->
+        <div class="subject">
+            <div class="subject-title">数学部分（40分）</div>
+            
+            <div class="section">
+                <div class="section-title">一、思维挑战（12分）</div>
+                
+                <div class="question">
+                    <div class="difficulty-tag">高难度</div>
+                    <div class="question-title">1. 找规律填数（6分）</div>
+                    <div class="question-content">
+                        <p>(1) 2, 4, 8, 16, ( ), ( )</p>
+                        <p>(2) 1, 4, 9, 16, ( ), ( )</p>
+                        <p>(3) 3, 6, 12, 24, ( ), ( )</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <div class="difficulty-tag">高难度</div>
+                    <div class="question-title">2. 在括号里填上合适的单位（6分）</div>
+                    <div class="question-content">
+                        <p>(1) 小明身高128( )，体重30( )</p>
+                        <p>(2) 一节课40( )，课间休息10( )</p>
+                        <p>(3) 铅笔长15( )，教室长8( )</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">二、计算能手（12分）</div>
+                
+                <div class="question">
+                    <div class="difficulty-tag">高难度</div>
+                    <div class="question-title">3. 脱式计算（6分）</div>
+                    <div class="math-grid">
+                        <div class="math-cell">72 - (38 + 16)</div>
+                        <div class="math-cell">54 ÷ 6 × 7</div>
+                        <div class="math-cell">28 + 6 × 5</div>
+                        <div class="math-cell">90 - 48 ÷ 6</div>
+                        <div class="math-cell">(14 + 21) ÷ 7</div>
+                        <div class="math-cell">8 × 9 - 36</div>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <div class="difficulty-tag">高难度</div>
+                    <div class="question-title">4. 在○里填上"＞"、"＜"或"="（6分）</div>
+                    <div class="question-content">
+                        <p>3 × 6 ○ 4 × 5 &nbsp;&nbsp; 24 ÷ 4 ○ 30 ÷ 5</p>
+                        <p>500厘米 ○ 5米 &nbsp;&nbsp; 1小时 ○ 100分钟</p>
+                        <p>7 × 8 - 8 ○ 6 × 8 &nbsp;&nbsp; 36 ÷ 6 + 3 ○ 36 ÷ 9 + 5</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">三、解决问题（16分）</div>
+                
+                <div class="question">
+                    <div class="difficulty-tag">高难度</div>
+                    <div class="question-title">5. 综合应用（16分）</div>
+                    <div class="question-content">
+                        <p>(1) 妈妈买了3盒巧克力，每盒8块。小明吃了5块，妹妹吃了7块，还剩多少块？（4分）</p>
+                        <p>(2) 学校组织春游，二(1)班有32人，二(2)班有28人，每辆大巴车可以坐50人，一辆大巴车够坐吗？（4分）</p>
+                        <p>(3) 小华从家到学校要走15分钟，他每天早晨7:15从家出发。</p>
+                        <p>① 他几点到学校？（2分）</p>
+                        <p>② 如果今天他晚出门了8分钟，他几点能到学校？（2分）</p>
+                        <p>(4) 小明有30元钱，他想买一个25元的书包和一支6元的钢笔，他的钱够吗？如果不够，还差多少钱？（4分）</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>恭喜你完成挑战！请认真检查，祝你取得好成绩！</p>
+            <p>出卷人：王老师 &nbsp; 审核人：李老师 &nbsp; 2025年6月</p>
+        </div>
+    </div>
+</body>
+</html>
